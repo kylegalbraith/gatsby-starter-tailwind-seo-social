@@ -1,0 +1,105 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+ @tailwind preflight;
+
+ /**
+  * This injects any component classes registered by plugins.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/components";
+  */
+ @tailwind components;
+ 
+ /**
+  * Here you would add any of your custom component classes; stuff that you'd
+  * want loaded *before* the utilities so that the utilities could still
+  * override them.
+  *
+  * Example:
+  *
+  * .btn { ... }
+  * .form-input { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "components/buttons";
+  * @import "components/forms";
+  */
+ 
+ /**
+  * This injects all of Tailwind's utility classes, generated based on your
+  * config file.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/utilities";
+  */
+ @tailwind utilities;
+ 
+ /**
+  * Here you would add any custom utilities you need that don't come out of the
+  * box with Tailwind.
+  *
+  * Example :
+  *
+  * .bg-pattern-graph-paper { ... }
+  * .skew-45 { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "utilities/background-patterns";
+  * @import "utilities/skew-transforms";
+  */
+
+  body {
+    /*background-image: url('../images/magnus-2050.png');*/
+    background: #382b5f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #2c3540, #382b5f, #654EAB); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #2c3540, #382b5f, #654EAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .bg-cover-image {
+    /*background-image: url('../images/magnus-2050.png');*/
+    background: #382b5f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right,#2c3540, #382b5f, #654EAB); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #2c3540, #382b5f, #654EAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .blog-content > p > a {
+    @apply text-purple
+  }
+
+  .blog-content > p > a:hover {
+    @apply text-orange-dark
+  } 
+
+  .blog-content > p, .blog-content > ol, .blog-content > ul {
+    @apply mt-4 mb-4;
+  }
+
+  .blog-content > h3 {
+    @apply text-3xl font-normal text-indigo-darker mt-8 mb-4;
+  }
+
+  .blog-content > h5 {
+    @apply text-lg font-semibold text-indigo-darker
+  }
+
+  .blog-content > .gatsby-highlight > pre[class^='language'] {
+    @apply p-6 bg-indigo-darkest text-grey-lightest;
+  }
+
+  .blog-content > ol > li, .blog-content > ul > li {
+    @apply mb-2
+  }
+ 

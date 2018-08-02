@@ -1,0 +1,6 @@
+# Project dependencies
+.cache
+node_modules
+
+# Build directory
+/public
