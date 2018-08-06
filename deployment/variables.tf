@@ -12,8 +12,3 @@ variable "acm_certificate_arn" {
   description = "ARN for the AWS Certificate Manager SSL certificate (see https://blog.kylegalbraith.com/2018/03/02/adding-free-ssl-certificates-to-static-websites-via-aws-certificate-manager/ for details)"
   default     = ""
 }
-
-variable "route53_hosted_zone" {
-  description = "Route53 hosted zone to create the alias for the blog"
-  default     = ""
-}

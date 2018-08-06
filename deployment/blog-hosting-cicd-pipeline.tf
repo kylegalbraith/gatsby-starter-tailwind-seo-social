@@ -75,15 +75,3 @@ resource "aws_cloudfront_distribution" "blog_distribution" {
     ssl_support_method  = "sni-only"
   }
 }
-
-resource "aws_route53_record" "blog-record" {
-  zone_id = "${var.route53_hosted_zone}"
-  name    = "${var.blog_url}"
-  type    = "A"
-
-  alias = {
-    name                   = "${aws_cloudfront_distribution.blog_distribution.domain_name}"
-    zone_id                = "${aws_cloudfront_distribution.blog_distribution.hosted_zone_id}"
-    evaluate_target_health = false
-  }
-}
