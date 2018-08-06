@@ -75,3 +75,7 @@ resource "aws_cloudfront_distribution" "blog_distribution" {
     ssl_support_method  = "sni-only"
   }
 }
+
+output "cloudfront_distribution_domain" {
+    value = "${aws.cloudfront_distribution.blog_distribution.domain_name}"
+}
