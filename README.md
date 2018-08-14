@@ -1,5 +1,5 @@
 ## Getting started
-*Note: This starter project is running the latest version of Gatsby V2 which is still Beta*
+*Note: This starter project is running the latest version of Gatsby V2 which is still in Beta*
 1. Install the `gatsby-cli` package globally.
 ```bash
 npm install --global gatsby-cli
