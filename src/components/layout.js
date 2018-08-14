@@ -1,13 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-
 import config from "../config/config";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./index.css";
 
-const TemplateWrapper = ({ children }) => (
+export default ({ children }) => (
   <div className="flex flex-col min-h-screen text-grey-darkest">
     <Helmet
       title={config.siteTitle}
@@ -17,14 +15,8 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header />
     <div className="flex flex-col flex-1 container mx-auto p-8 w-full">
-      {children()}
+      {children}
     </div>
     <Footer />
   </div>
 );
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func
-};
-
-export default TemplateWrapper;
