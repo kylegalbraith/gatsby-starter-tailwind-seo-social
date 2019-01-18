@@ -8,4 +8,4 @@ node_modules
 /public
 
 # Prettier Config
-.prettierrc.js
+.prettierrc
