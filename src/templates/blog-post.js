@@ -1,17 +1,17 @@
-import React from "react";
-import Img from "gatsby-image";
-import Link from "gatsby-link";
-import Seo from "../components/Seo";
-import Social from "../components/Social";
-import config from "../config/config";
-import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import React from 'react';
+import Img from 'gatsby-image';
+import Link from 'gatsby-link';
+import Seo from '../components/Seo';
+import Social from '../components/Social';
+import config from '../config/config';
+import Layout from '../components/layout';
+import { graphql } from 'gatsby';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const { previous, next } = this.props.pageContext;
-    const url = "https://blog.kylegalbraith.com" + this.props.location.pathname;
+    const url = 'https://blog.kylegalbraith.com' + this.props.location.pathname;
 
     return (
       <Layout>
@@ -30,7 +30,7 @@ class BlogPostTemplate extends React.Component {
           <p className="block mb-8 pb-4 border-b-2">
             <span role="img" aria-label="blog post date">
               📅
-            </span>{" "}
+            </span>{' '}
             {post.frontmatter.date} – {config.authorName}
           </p>
           <div
@@ -39,10 +39,10 @@ class BlogPostTemplate extends React.Component {
           />
           <div className="mt-16 pt-8 social-content text-center border-t">
             <p className="font-light">
-              Did you enjoy this post? Share the{" "}
+              Did you enjoy this post? Share the{' '}
               <span role="img" aria-label="love the post">
                 ❤️
-              </span>{" "}
+              </span>{' '}
               with others.
             </p>
             <Social url={url} title={post.frontmatter.title} />
@@ -51,10 +51,10 @@ class BlogPostTemplate extends React.Component {
           <ul
             className="mt-8 border-t-2 pt-4"
             style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              listStyle: "none",
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              listStyle: 'none',
               paddingLeft: 0
             }}
           >
