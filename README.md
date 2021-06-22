@@ -1,3 +1,5 @@
+# [Deprecated] - this project is no longer maintained.
+
 ## Getting started
 *Note: This starter project is running the latest version of Gatsby V2 which is still in Beta*
 1. Install the `gatsby-cli` package globally.
